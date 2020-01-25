@@ -93,9 +93,4 @@ class Calculator{
         temp = 0
         lastBinaryOperation = nil
     }
-    
-    func C(){
-        result = 0
-    }
-    
 }
