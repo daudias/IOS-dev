@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     
     @IBOutlet var lampButtons: [UIButton]!
     
-    var colIndex = 2;
+    var colIndex = 2, Index = -1;
     
     @IBAction func clickedButton(_ sender: UIButton) {
         showColors();
         if let index = lampButtons.firstIndex(of: sender){
-            model.chooseLamp(at: index, color: colIndex)
+            Index = index
         }
     }
     
@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         if(sender.backgroundColor == #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)) {
             colIndex = 1;
         }
+        model.chooseLamp(at: Index, color: colIndex)
         showLamps()
     }
     func showColors() {
